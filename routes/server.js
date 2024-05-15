@@ -42,10 +42,10 @@ router.get("/", (req, res) => {
     name,
     score,
     rank
-  }));
+  })); 
 
   res.status(200).json(leaderboard);
-});
+}); 
 
 
 router.post('/', (req, res) => {

@@ -11,11 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json()); 
 
-app.get('/', (req, res) => {
-    res.send('Welcome to the backend cradle API!');
-  });
-
-app.use('/players', leaderboard);
+app.use('/', leaderboard);
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
